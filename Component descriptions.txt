@@ -1,7 +1,9 @@
 Mouse.dll
 
 General mouse controling as ordinary person uses mouse itself.
-Mouse control functions at kernel/driver/custom controller level. Manipulation invisible to 3rd party applications (indifferent to normal mouse usage).
+Mouse control functions at kernel/driver/custom controller level.
+Manipulation invisible to 3rd party applications (indifferent to normal mouse usage).
+
 Functions:
 move to coordinates (prefferably imitating random path as human would move mouse)
 report position
@@ -12,75 +14,130 @@ scroll
 double click
 drag drop
 
+//Time evaluation of completion:
+Can do it by our selve!
 
 
 Kbd.dll
 
 General keyboard controling as ordinary person uses keyboard itself.
-Keyboard controll functions at kernel/driver/custom controller level. Manipulation invisible to 3rd party applications (indifferent to normal mouse usage).
+Keyboard controll functions at kernel/driver/custom controller level.
+Manipulation invisible to 3rd party applications (indifferent to normal mouse usage).
+
 Functions:
 key press
 key release
 enter key
 enter text
 
+//Time evaluation of completion:
+Can do it by our selves!
+
+
+
 Vid.dll
-Video grabbing and analysing module. Analyse scene and recognize objects, information, text what is contained in image.
+
+Video tracking/grabbing and analysing module.
+Analyse scene and recognize objects (exmaple: character, other characters), information, text what is contained in image.
+There is going to need to use OpenCV for coding
+
 Functions:
 Take screenshot
 Find object
-OCR
-get part of screen
-track object
+OCR ???????????????????
+get part of screen - what next when we get the part of screen???????????????????
+track object (several objects at same time)
+
+//Time evaluation of completion:
+Need 20 hours for object tracking source code
+Need 5 hours for several object tracking simultaneously
+Need 5 hours for taking screen shots, analysis and its interpretation
+Need 2 hours if object was lost and find it again
+
+
 
 Proc.dll
+
+Short description???????????????????
 Manipulates executables and processess
+
 Functions:
-Launch program
+Launch program    what program????????
 close/kill program
-identify PID
-check if process is responding (not unresponsive)
+identify PID   what is PID???????????
+check if process is responding (not unresponsive) which processes????????????
+
+//Time evaluation of completion:
+Can do it by ourselves!
+
 
 Net.dll
+
+Is Internet connection stable or not
 Network data identification and tracking
+
 Functions:
-Get packets
-extract packet data
-corelate network events with application events
+Get packets where from????????
+extract packet data      why??????
+corelate network events with application events   with proc.dll ?????????????
+
+//Time evaluation of completion
+Can do it by ourselves!
 
 
 Optimizer
-checks action queue and optimizes it
+checks current Bot's status, evaluates it and if necessary changes sequences of action of Bot itself. 
+checks action queue and optimizes it.
 
 State tracker
-Keeps track of each player status - current status, next action... Interacts with database for keeping and retrieving records.
+Keeps track of each player status (what do mean each???????) - current status, next action... ????????
+Interacts with database for keeping and retrieving records. what records???????
+
 Functions:
 Get status
-Get next action
-Modify next action
+Get next action  from database????????
+Modify next action   how it is going to look like????????
 Pause player
 Resume player
 Stop player
-Reset player
+Reset player    how it will look like????????
+
+//Time evaluation of completion
+Can do it by ourselves!
+
 
 Main
+
+description? how it differs from optimizer????????
 integral part responsible for unified functioning of the components, interacts with database for acquiring process logic and translating it to actions. Controls bot configuration.
+
 Functions:
-Start bot
-Stop bot
-Pause bot
+Start bot   how it will look like?????????
+Stop bot    how it will look like??????? 
+Pause bot   how it will look like??????
 Resume bot
-Set configuration (player list, play style, play time)
+Set configuration (player list, play style, play time) anything else????????
+
+//Time evaluation of completion:
+Can do it by ourselves
+
 
 Database
-3 logical parts:
+
+All intelligence how character should act and behave in many different situations (for instance: if he sees enemy, if he sees other bots, how he shops, how uses auction)
+
+3 logical parts.
 1. static data:
-menu, button, etc. - all relevant coordinates
-char related data - name, login data...
+menu, button, etc. - all relevant coordinates   ????????
+char related data - name, login data...          ???????????
 2. status data:
 player status - playing, logged off, paused...
 char status - current action, next action, action type (fighting, traveling, resource harvesting, manufacturing...)
 char items - item list, money, wault (bank), equipped items
 3 logical data:
-what steps to perform for some action (buy: open market, find item, buy item, close market)
+what steps to perform for some action (buy: open market, find item, buy item, close market) //next step ??????????
 playstyle scripts (action steps for game-play - fighting (for example): equip weapon->get quest->go to place->fight->return after finished quest)
+
+
+//Time evaluation of completion:
+Can do ti by ourselves!
