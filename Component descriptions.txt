@@ -1,5 +1,7 @@
-what steps to perform Mouse.dll
-Mouse controll functions at kernel/driver/custom controller level. Manipulation invisible to 3rd party applications (indifferent to normal mouse usage).
+Mouse.dll
+
+General mouse controling as ordinary person uses mouse itself.
+Mouse control functions at kernel/driver/custom controller level. Manipulation invisible to 3rd party applications (indifferent to normal mouse usage).
 Functions:
 move to coordinates (prefferably imitating random path as human would move mouse)
 report position
@@ -10,7 +12,11 @@ scroll
 double click
 drag drop
 
+
+
 Kbd.dll
+
+General keyboard controling as ordinary person uses keyboard itself.
 Keyboard controll functions at kernel/driver/custom controller level. Manipulation invisible to 3rd party applications (indifferent to normal mouse usage).
 Functions:
 key press
