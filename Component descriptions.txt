@@ -59,6 +59,7 @@ Need 2 hours if object was lost and find it again
 Proc.dll
 
 Short description???????????????????
+maybe it can be next step????????
 Manipulates executables and processess
 
 Functions:
@@ -73,8 +74,9 @@ Can do it by ourselves!
 
 Net.dll
 
-Is Internet connection stable or not
-Network data identification and tracking
+Is Internet connection stable or not.
+Network data identification and tracking.
+maybe it can be dont throught next step???????????????
 
 Functions:
 Get packets where from????????
@@ -86,8 +88,9 @@ Can do it by ourselves!
 
 
 Optimizer
-checks current Bot's status, evaluates it and if necessary changes sequences of action of Bot itself. 
+checks current Player's status, evaluates it and if necessary changes at needed. 
 checks action queue and optimizes it.
+Maybe we can do it in next step?????????????????????????
 
 State tracker
 Keeps track of each player status (what do mean each???????) - current status, next action... ????????
