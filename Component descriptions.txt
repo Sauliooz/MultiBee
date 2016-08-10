@@ -39,14 +39,17 @@ Vid.dll
 
 Video tracking/grabbing and analysing module.
 Analyse scene and recognize objects (exmaple: character, other characters), information, text what is contained in image.
-There is going to need to use OpenCV for coding
 
+//can we divide in 2 detecting and analysing. what is needed in each of them????????????
 Functions:
 Take screenshot
 Find object
-OCR ???????????????????
+OCR - Optical character recognition (analyse objects. For instances: what is written in table, what letters, what symbols are written)
 get part of screen - what next when we get the part of screen???????????????????
 track object (several objects at same time)
+
+There is going to need to use OpenCV for coding
+There is going to need to use tesseract-ocr, which is a great OCR library
 
 //Time evaluation of completion:
 Need 20 hours for object tracking source code
