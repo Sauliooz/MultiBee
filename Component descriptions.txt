@@ -2,6 +2,8 @@ Mouse.dll
 
 General mouse controling as ordinary person uses mouse itself.
 Mouse control functions at kernel/driver/custom controller level.
+//next step, other programs can't identify messing with a mouse
+//some games can identify bots.
 Manipulation invisible to 3rd party applications (indifferent to normal mouse usage).
 
 Functions:
@@ -22,6 +24,8 @@ Kbd.dll
 
 General keyboard controling as ordinary person uses keyboard itself.
 Keyboard controll functions at kernel/driver/custom controller level.
+//next step. Other programs can't identify meesing wit ha mouse
+//some games can identify bots.
 Manipulation invisible to 3rd party applications (indifferent to normal mouse usage).
 
 Functions:
@@ -40,13 +44,22 @@ Vid.dll
 Video tracking/grabbing and analysing module.
 Analyse scene and recognize objects (exmaple: character, other characters), information, text what is contained in image.
 
-//can we divide in 2 detecting and analysing. what is needed in each of them????????????
+//can we divide in 2 detecting and analysing. what is needed in each of them
 Functions:
+a. Detection:
 Take screenshot
+Get part of screen (for instance. little map on top right corner, character life limit, expirence limit)
 Find object
-OCR - Optical character recognition (analyse objects. For instances: what is written in table, what letters, what symbols are written)
-get part of screen - what next when we get the part of screen???????????????????
-track object (several objects at same time)
+track object (several onjects at a time)
+track character and monster coordinates in the map (right top corner in the game)
+//if there are marked monster in thr little map, detection must be made throught the screen itself
+b. Analysing:
+OCR - Optical character recognition
+analyse table and text in it
+analyse chat messages
+identify prices, items in auction and related to bot 
+//next step. It will be needed when higher level will be reached
+
 
 There is going to need to use OpenCV for coding
 There is going to need to use tesseract-ocr, which is a great OCR library
@@ -61,39 +74,54 @@ Need 2 hours if object was lost and find it again
 
 Proc.dll
 
-Short description???????????????????
-maybe it can be next step????????
+monitors games application itself (start the game, monitor rams, monitor processor)
+
 Manipulates executables and processess
 
 Functions:
-Launch program    what program????????
-close/kill program
-identify PID   what is PID???????????
-check if process is responding (not unresponsive) which processes????????????
+Launch game application  
+close/kill game application
+identify PID   //PID - program ID, to recongnize different games (accounts)
+check if process is responding (not unresponsive) //wow.exe itself.
 
 //Time evaluation of completion:
-Can do it by ourselves!
+//Can do it by ourselves!
+//it can done in next step to automate (human can handle it)
+//Proc.dll can be implemented in Main.dll next step will be to separate them.
 
 
 Net.dll
 
 Is Internet connection stable or not.
 Network data identification and tracking.
-maybe it can be dont throught next step???????????????
+it is like second recognition instrument (second bot awarness module. First one is screen itself)
+It helps to:
+a. Is there fights going on
+b. smone actions can't go to server because of the latency (maybe we need to press 2 times)
+c. damage done to enemy
+d. New enemy appers in the screen
+e. busy of chat
 
 Functions:
-Get packets where from????????
-extract packet data      why??????
-corelate network events with application events   with proc.dll ?????????????
+Get packets
+//like a sniffing, man in a middle attack
+extract packet data
+// size, amount, speed of packets
+corelate network events with application events
+//monitor path application - server - application with a screen itself where action is going on 
 
 //Time evaluation of completion
-Can do it by ourselves!
+//Can do it by ourselves!
+//It can be done in the next step (human can handle it)
+//It should be written allready (source code)
+
 
 
 Optimizer
+Few bots playing simultanealy. 
+It works within one platform if there will be more than one bot within.
 checks current Player's status, evaluates it and if necessary changes at needed. 
 checks action queue and optimizes it.
-Maybe we can do it in next step?????????????????????????
 
 State tracker
 Keeps track of each player status (what do mean each???????) - current status, next action... ????????
@@ -109,23 +137,25 @@ Stop player
 Reset player    how it will look like????????
 
 //Time evaluation of completion
-Can do it by ourselves!
+//Can do it by ourselves!
+// It can be done on the next step (human can do it)
+
 
 
 Main
 
-description? how it differs from optimizer????????
+Integrates all modules.
 integral part responsible for unified functioning of the components, interacts with database for acquiring process logic and translating it to actions. Controls bot configuration.
 
 Functions:
-Start bot   how it will look like?????????
-Stop bot    how it will look like??????? 
-Pause bot   how it will look like??????
+Start bot   
+Stop bot     
+Pause bot 
 Resume bot
-Set configuration (player list, play style, play time) anything else????????
+Set configuration (player list, play style, play time, choose realm)
 
 //Time evaluation of completion:
-Can do it by ourselves
+//Can do it by ourselves
 
 
 Database
@@ -134,16 +164,25 @@ All intelligence how character should act and behave in many different situation
 
 3 logical parts.
 1. static data:
-menu, button, etc. - all relevant coordinates   ????????
-char related data - name, login data...          ???????????
+menu, button, etc. - all relevant coordinates
+//where are the buttons, menu etc.
+char related data - name, login data...       
 2. status data:
+//what bot is doint at the moment. for instance: kill monster, accoplish this quest, go there etc.
 player status - playing, logged off, paused...
 char status - current action, next action, action type (fighting, traveling, resource harvesting, manufacturing...)
 char items - item list, money, wault (bank), equipped items
 3 logical data:
-what steps to perform for some action (buy: open market, find item, buy item, close market) //next step ??????????
+//what bot must do in a market, in a quest, in a fight field
+what steps to perform for some action (buy: open market, find item, buy item, close market)
 playstyle scripts (action steps for game-play - fighting (for example): equip weapon->get quest->go to place->fight->return after finished quest)
+//example what bot could do
 
 
 //Time evaluation of completion:
-Can do ti by ourselves!
+//Can do ti by ourselves!
+
+
+
+Next steps:
+//make a self learning from newswet youtube videos. Only feed of such videos would be forwarded to bots themselves.
