@@ -47,6 +47,13 @@ Analyse scene and recognize objects (exmaple: character, other characters), info
 //can we divide in 2 detecting and analysing. what is needed in each of them
 Functions:
 a. Detection:
+Priority 1:
+  a. Position in the map;
+  b. recognize youself in the map;
+  c. identify health status;
+  d. recognize enemies;
+  e. recognize other players; (maybe on mini map?)
+  f. recognize NPC; (maybe on mini map?)
 Take screenshot
 Get part of screen (for instance. little map on top right corner, character life limit, expirence limit)
 Find object
