@@ -193,3 +193,5 @@ playstyle scripts (action steps for game-play - fighting (for example): equip we
 
 Next steps:
 //make a self learning from newswet youtube videos. Only feed of such videos would be forwarded to bots themselves.
+//Offload video processing to dedicated server. Benefits: faster processing, maybe? Minimize detection of interferring with game client.
+//
